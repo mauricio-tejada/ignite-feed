@@ -19,19 +19,20 @@ export const ProfileInfo = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.56rem;
 
 
     margin-top: -2rem;
 
     
     strong {
+        line-height: 1.6;
         color: var(--gray7);
         font-size: 1rem;
         font-weight: 700;
     }
 
     span {
+        line-height: 1.6;
         color: var(--gray5);
         font-size: 0.875rem;
         font-weight: 400;
