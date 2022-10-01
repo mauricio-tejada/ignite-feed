@@ -16,5 +16,5 @@ export const Container = styled.main`
 `
 
 export const Feed = styled.div`
-    background-color: red;
+    
 `

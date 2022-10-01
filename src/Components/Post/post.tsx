@@ -12,11 +12,11 @@ export function Post() {
                     <img src="https://github.com/mauricio-tejada.png" className="avatar"></img>
                     <div className="authorInfo">
                         <strong>Mauricio Fernandes</strong>
-                        <span>Desenvolvedor Front-end</span>
+                        <span>Front-end dev</span>
                     </div>
                 </div>
                 
-                <time></time>
+                <time>Publicado a 8h</time>
             </header>
 
 

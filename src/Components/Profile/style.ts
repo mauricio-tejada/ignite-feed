@@ -6,6 +6,8 @@ export const Container = styled.aside`
     border-radius: 8px;
     overflow: hidden;
 
+    max-height: 296px;
+
     img {
         width: 100%;
         height: 72px;
@@ -17,6 +19,8 @@ export const ProfileInfo = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.56rem;
+
 
     margin-top: -2rem;
 
