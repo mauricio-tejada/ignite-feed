@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Container = styled.article`
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 
     padding: 2.5rem;
     border-radius: 8px;
@@ -79,6 +80,10 @@ export const Content = styled.div`
         text-decoration: none;
         color: var(--green-light);
         font-weight: 700;
+
+        &:hover {
+            color: var(--green);
+        }
     }
 `
 
@@ -127,6 +132,7 @@ export const CommentForm = styled.form`
         }
     }
 
-    
-` 
+`
+
+
 

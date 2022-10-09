@@ -1,5 +1,5 @@
-import React from "react";
 import { Container, Content, Header, CommentForm } from "./style";
+import { Comment } from "../Comment/comment";
 
 
 export function Post() {
@@ -15,7 +15,7 @@ export function Post() {
                     </div>
                 </div>
 
-                <time>Publicado a 8h</time>
+                <time title="07 de Outubro às 05:55" dateTime="2022/10/07 05:55:00">Publicado há 8h</time>
             </Header>
 
             <Content>
@@ -28,9 +28,9 @@ export function Post() {
                     <a href="#">👉 jane.design/doctorcare</a>
                 </p>
                 <p>
-                    <a href="#">#novoprojeto</a>
-                    <a href="#">#nlw</a>
-                    <a href="#">#rocketseat</a>
+                    <a href="#">#novoprojeto</a>{" "}
+                    <a href="#">#nlw</a>{" "}
+                    <a href="#">#rocketseat</a>{" "}
                 </p>
             </Content>
 
@@ -43,6 +43,13 @@ export function Post() {
 
                 <button type="submit">Publicar</button>
             </CommentForm>
+
+            <Comment>
+            </Comment>
+            <Comment>
+            </Comment>
+            <Comment>
+            </Comment>
 
         </Container>
     )

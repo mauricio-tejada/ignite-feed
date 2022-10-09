@@ -60,7 +60,7 @@ export const Footer = styled.footer`
         border: 1px solid var(--green-light);
         border-radius: 8px;
         height: 50px;
-        padding: 0 1.5rem;
+        padding: 0 1rem;
         font-weight: bold;
         text-decoration: none;
 
@@ -69,5 +69,9 @@ export const Footer = styled.footer`
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 0.6rem;
+
+        font-size: 1rem;
+        font-weight: 700;
     }
 `

@@ -18,6 +18,11 @@ export const GlobalStyle = createGlobalStyle`
    --danger: #f75a68;
 }
 
+:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--green-light);
+}
+
 * {
     margin: 0;
     padding: 0;

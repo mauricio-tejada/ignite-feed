@@ -16,5 +16,7 @@ export const Container = styled.main`
 `
 
 export const Feed = styled.div`
-    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 `

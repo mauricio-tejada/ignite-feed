@@ -1,4 +1,4 @@
-import React from "react";
+import { Pencil } from "phosphor-react";
 import { Container, Footer, ProfileInfo } from "./style";
 
 
@@ -15,6 +15,7 @@ export function Profile() {
 
             <Footer>
                 <a href="#">
+                <Pencil size={20} />
                     Editar seu perfil
                 </a>
             </Footer>
