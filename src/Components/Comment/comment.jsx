@@ -3,7 +3,7 @@ import { Trash, ThumbsUp } from "phosphor-react";
 
 
 
-export function Comment() {
+export function Comment({ content }) {
     return (
         <Container>
 
@@ -16,7 +16,7 @@ export function Comment() {
                     <strong>Fulano de Tal</strong>
                     <time title="07 de Outubro às 05:55" dateTime="2022/10/07 05:55:00">Publicado há 8h</time>
                 </header>
-                <p>Muito bom, parabéns!</p>
+                <p>{content}</p>
                 <button title="deletar comentário">
                     <Trash size={20} />
                 </button>
