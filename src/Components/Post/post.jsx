@@ -1,4 +1,4 @@
-import { Container, Content, Header, CommentForm } from "./style";
+import { Container, Content, Header, CommentForm, Button } from "./style";
 import { Comment } from "../Comment/comment";
 import { format, formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR"
@@ -31,6 +31,13 @@ export function Post({ author, content, publishedAt } = props) {
         setNewCommentText(event.target.value)
     }
 
+    function deleteComment(comment) {
+        let currentComments = comments
+        let newCommentList = currentComments.filter( item =>  item !== comment)
+
+        setComments(newCommentList)
+    }
+
     return (
         <Container>
 
@@ -49,9 +56,9 @@ export function Post({ author, content, publishedAt } = props) {
             <Content>
                 {content.map(item => {
                     if (item.type === 'paragraph') {
-                        return <p>{item.content}</p>
+                        return <p key={item.content}>{item.content}</p>
                     } else if (item.type === 'link') {
-                        return <p><a href="#">{item.content}</a></p>
+                        return <p key={item.content}><a href="#">{item.content}</a></p>
                     }
                 })}
             </Content>
@@ -68,16 +75,21 @@ export function Post({ author, content, publishedAt } = props) {
                     placeholder="Escreva seu comentário..."
                 />
 
-                <button
+                <Button
                     type="submit"
+                    buttonDisplay={!newCommentText ? "none" : "block"}
                 >
                     Publicar
-                </button>
+                </Button>
             </CommentForm>
 
             {comments.map(comment => {
                 return (
-                    <Comment content={comment} />
+                    <Comment
+                        key={comment}
+                        content={comment}
+                        onDeleteComment={deleteComment}
+                    />
                 )
             })}
 

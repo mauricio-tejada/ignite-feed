@@ -69,6 +69,11 @@ export const CommentContainer = styled.div`
         right: 1rem;
         background: transparent;
         color: var(--gray6);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--danger);
+        }
     }
 `
 
@@ -80,6 +85,8 @@ export const Footer = styled.footer`
         justify-content: flex-start;
         align-items: center;
         gap: 0.62rem;
+
+        cursor: pointer;
 
         background: transparent;
         color: var(--gray5);

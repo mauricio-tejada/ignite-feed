@@ -116,7 +116,10 @@ export const CommentForm = styled.form`
         margin-top: 1rem;
     }
 
-    button {
+`
+
+export const Button = styled.button`
+        display: ${ (props) => props.buttonDisplay};
         padding: 1rem 1.5rem;
         margin-top: 1rem;
         border-radius: 8px;
@@ -130,7 +133,6 @@ export const CommentForm = styled.form`
         &:hover {
             background: var(--green-light);
         }
-    }
 
 `
 
