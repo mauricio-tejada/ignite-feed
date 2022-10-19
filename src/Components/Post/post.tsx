@@ -2,12 +2,30 @@ import { Container, Content, Header, CommentForm, Button } from "./style";
 import { Comment } from "../Comment/comment";
 import { format, formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR"
-import { useState } from 'react'
+import { useState, FormEvent, ChangeEvent, JSXElementConstructor } from 'react'
+
+interface Author {
+    avatarUrl: string,
+    name: string,
+    role: string,
+}
+
+interface PostContent {
+    type: 'paragraph' | 'link',
+    content: string
+}
+
+interface PostProps {
+    author: Author,
+    content: PostContent[],
+    publishedAt: Date
+}
 
 
-export function Post({ author, content, publishedAt } = props) {
 
-    const [comments, setComments] = useState([])
+export function Post({ author, content, publishedAt } : PostProps) {
+
+    const [comments, setComments] = useState<string[]>([])
 
     const [newCommentText, setNewCommentText] = useState('')
 
@@ -20,18 +38,18 @@ export function Post({ author, content, publishedAt } = props) {
         addSuffix: true,
     })
 
-    function handleCreateNewComment() {
+    function handleCreateNewComment(event: FormEvent) {
         event.preventDefault()
 
         setComments([...comments, newCommentText])
         setNewCommentText('')
     }
 
-    function handleNewCommentChange() {
+    function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
         setNewCommentText(event.target.value)
     }
 
-    function deleteComment(comment) {
+    function deleteComment(comment: string) {
         let currentComments = comments
         let newCommentList = currentComments.filter( item =>  item !== comment)
 
