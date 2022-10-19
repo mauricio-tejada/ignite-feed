@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
    --danger: #f75a68;
 }
 
-:focus {
+textarea:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--green-light);
 }
@@ -39,6 +39,8 @@ html, body, input, textarea, button {
 body {
     background-color: var(--gray1);
 }
+
+
 
 
 

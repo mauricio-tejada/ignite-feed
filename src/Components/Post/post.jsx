@@ -38,6 +38,8 @@ export function Post({ author, content, publishedAt } = props) {
         setComments(newCommentList)
     }
 
+    const isNewCommentEmpty = newCommentText.length === 0
+
     return (
         <Container>
 
@@ -77,7 +79,7 @@ export function Post({ author, content, publishedAt } = props) {
 
                 <Button
                     type="submit"
-                    buttonDisplay={!newCommentText ? "none" : "block"}
+                    disabled={isNewCommentEmpty}
                 >
                     Publicar
                 </Button>

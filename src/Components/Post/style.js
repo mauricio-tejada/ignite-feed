@@ -119,7 +119,6 @@ export const CommentForm = styled.form`
 `
 
 export const Button = styled.button`
-        display: ${ (props) => props.buttonDisplay};
         padding: 1rem 1.5rem;
         margin-top: 1rem;
         border-radius: 8px;
@@ -130,8 +129,13 @@ export const Button = styled.button`
         width: 6.75rem;
         cursor: pointer;
 
-        &:hover {
+        &:not(:disabled):hover {
             background: var(--green-light);
+        }
+
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
         }
 
 `

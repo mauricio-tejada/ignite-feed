@@ -79,6 +79,15 @@ export const CommentContainer = styled.div`
 
 export const Footer = styled.footer`
     grid-area: footer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.62rem;
+
+    background: transparent;
+    color: var(--gray5);
+    font-size: 0.87rem;
+    font-weight: 700;
 
     button {
         display: flex;
@@ -92,6 +101,10 @@ export const Footer = styled.footer`
         color: var(--gray5);
         font-size: 0.87rem;
         font-weight: 700;
+
+        &:hover {
+           color: var(--green-light);
+        }
 
     }
 
