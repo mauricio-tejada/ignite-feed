@@ -1,9 +1,13 @@
 # Ignite Feed
 
 Esta aplicação é um feed de postagens simples, com opções de comentar e reagir a comentários, criada para praticar os fundamentos do React e TypeScript.
-<img src="./public/screenshot.png">
 <br>
 <br>
+<img src="./public/app.gif">
+<br>
+<br>
+
+
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
@@ -37,6 +41,8 @@ Após isso, siga o endereço informado no seu navegador, ex: http://localhost:51
 
 <br>
 <br>
+
+
 ## 🛠️ Construído com
 
 * React
@@ -47,4 +53,4 @@ Após isso, siga o endereço informado no seu navegador, ex: http://localhost:51
 <br>
 <br>
 ---
-⌨️ com ❤️ por [Mauricio Fernandes Tejada](https://github.com/mauricio-tejada) 😊
+⌨️ com ❤️ por [Mauricio Fernandes Tejada](https://github.com/mauricio-tejada) 
